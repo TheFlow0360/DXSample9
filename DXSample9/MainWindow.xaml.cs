@@ -1,4 +1,6 @@
-﻿using DevExpress.Xpf.Ribbon;
+﻿using System;
+using DevExpress.Xpf.Docking.Base;
+using DevExpress.Xpf.Ribbon;
 
 namespace DXSample9
 {
@@ -10,6 +12,12 @@ namespace DXSample9
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void DockLayoutManager_OnDockOperationCompleted(object sender, DockOperationCompletedEventArgs e)
+        {
+            if (e.DockOperation == DevExpress.Xpf.Docking.DockOperation.Dock)
+                Dispatcher.BeginInvoke((Action)(() => { e.Item.IsActive = true; }));
         }
     }
 }

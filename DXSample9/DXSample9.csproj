@@ -37,8 +37,8 @@
   <ItemGroup>
     <Reference Include="DevExpress.Xpf.Core.v16.1" />
     <Reference Include="DevExpress.Data.v16.1" />
-    <Reference Include="DevExpress.Xpf.Docking.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Xpf.Layout.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Docking.v16.1, Version=16.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Layout.v16.1.Core, Version=16.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpf.Ribbon.v16.1" />
     <Reference Include="DevExpress.Printing.v16.1.Core" />
     <Reference Include="DevExpress.Images.v16.1" />

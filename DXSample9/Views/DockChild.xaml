@@ -5,12 +5,33 @@
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                     xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking"
                     xmlns:local="clr-namespace:DXSample9"
-                    d:DesignHeight="300"
-                    d:DesignWidth="300"
+                    xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+                    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
                     d:DataContext="{d:DesignInstance local:DockChildViewModel}"
                     mc:Ignorable="d">
-    <Grid>
-        <CheckBox IsChecked="{Binding AllowNew}">Allow New</CheckBox>
-    </Grid>
+    <DockPanel>
+        <dxr:RibbonControl DockPanel.Dock="Top">
+            <dxr:RibbonPageCategory Caption="Context">
+                <dxr:RibbonPage Caption="Page 1">
+                    <dxr:RibbonPageGroup Caption="Group 1">
+                        <dxb:BarButtonItem x:Name="biOpen"
+                                           Content="Open"
+                                           Command="ApplicationCommands.Open"
+                                           Glyph="{dx:DXImage Image=Open_16x16.png}"
+                                           LargeGlyph="{dx:DXImage Image=Open_32x32.png}" />
+                        <dxb:BarButtonItem x:Name="biNew"
+                                           Content="New"
+                                           Command="ApplicationCommands.New"
+                                           Glyph="{dx:DXImage Image=New_16x16.png}"
+                                           LargeGlyph="{dx:DXImage Image=New_32x32.png}" />
+                    </dxr:RibbonPageGroup>
+                </dxr:RibbonPage>
+            </dxr:RibbonPageCategory>
+        </dxr:RibbonControl>
+        <StackPanel>
+            <CheckBox IsChecked="{Binding AllowNew}">Allow New</CheckBox>
+        </StackPanel>
+    </DockPanel>
 </dxdo:DocumentPanel>
 

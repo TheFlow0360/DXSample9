@@ -79,7 +79,8 @@
                                         FloatingMode="Desktop"
                                         ScrollViewer.VerticalScrollBarVisibility="Disabled"
                                         ShowFloatWindowsInTaskbar="True"
-                                        MDIMergeStyle="WhenChildActivated">
+                                        MDIMergeStyle="WhenChildActivated"
+                                        DockOperationCompleted="DockLayoutManager_OnDockOperationCompleted">
                     <dxdo:LayoutGroup>
                         <dxdo:DocumentGroup>
                             <views:DockChild />
