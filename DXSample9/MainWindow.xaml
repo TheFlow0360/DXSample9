@@ -74,17 +74,19 @@
                 </dxr:RibbonStatusBarControl.RightItems>
             </dxr:RibbonStatusBarControl>
             <Grid>
-                <dxdo:DockLayoutManager DockingStyle="VS2010"
+                <dxdo:DockLayoutManager x:Name="DockLayoutManager"
+                                        DockingStyle="VS2010"
                                         FloatingDocumentContainer="DocumentHost"
                                         FloatingMode="Desktop"
                                         ScrollViewer.VerticalScrollBarVisibility="Disabled"
                                         ShowFloatWindowsInTaskbar="True"
                                         MDIMergeStyle="WhenChildActivated"
                                         DockOperationCompleted="DockLayoutManager_OnDockOperationCompleted">
+                    <dxdo:MVVMHelper.LayoutAdapter>
+                        <views:MainWindowLayoutAdapter />
+                    </dxdo:MVVMHelper.LayoutAdapter>
                     <dxdo:LayoutGroup>
-                        <dxdo:DocumentGroup>
-                            <views:DockChild />
-                        </dxdo:DocumentGroup>
+                        <dxdo:DocumentGroup x:Name="DocumentHost" />
                     </dxdo:LayoutGroup>
                 </dxdo:DockLayoutManager>
             </Grid>

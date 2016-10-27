@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Input;
+using DXSample9.Views;
 
 namespace DXSample9
 {
@@ -23,7 +24,7 @@ namespace DXSample9
 
         private void NewExecute(object sender, ExecutedRoutedEventArgs e)
         {
-            MessageBox.Show("New dialog");
+            ((MainWindow)Application.Current.MainWindow).AddToDocumentHost(new DockChild());
         }
 
         public CommandBinding NewCommand { get; private set; }

@@ -66,6 +66,7 @@
     <Compile Include="Views\DockChild.xaml.cs">
       <DependentUpon>DockChild.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MainWindowLayoutAdapter.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
